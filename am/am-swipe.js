@@ -11,12 +11,14 @@
     const href = root.dataset.href || 'https://amflowers.pl/';
     const base = root.dataset.assetBase || '';
     root.innerHTML = `
-      <p class="am-swipe__label" id="am-swipe-l"><svg viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="44" fill="none" stroke="currentColor" stroke-width="4"/><path fill="currentColor" d="M55 28l4.6 15.9 14.5-8-8 14.5L82 55l-15.9 4.6 8 14.5-14.5-8L55 82l-4.6-15.9-14.5 8 8-14.5L28 55l15.9-4.6-8-14.5 14.5 8z"/></svg>Kwiaciarnia Małgorzata rośnie</p>
+      <p class="am-swipe__label" id="am-swipe-l">Kwiaciarnia Małgorzata rośnie</p>
       <div class="am-swipe__track">
-        <span class="am-swipe__fill" aria-hidden="true"></span>
-        <span class="am-swipe__hint" aria-hidden="true">Przeciągnij do AM Flowers<i>→</i></span>
+        <svg class="am-swipe__cap l" viewBox="0 0 40 40" aria-hidden="true"><path d="M8 14.5l4.5 5.5-4.5 5.5-4.5-5.5z" class="d"/><path d="M40 16.5H27c-4 0-5.5-2.5-5.5-7M40 23.5H27c-4 0-5.5 2.5-5.5 7"/></svg>
+        <span class="am-swipe__rail" aria-hidden="true"><span class="am-swipe__fill"></span></span>
+        <svg class="am-swipe__cap r" viewBox="0 0 40 40" aria-hidden="true"><path d="M32 14.5l4.5 5.5-4.5 5.5-4.5-5.5z" class="d"/><path d="M0 16.5h13c4 0 5.5-2.5 5.5-7M0 23.5h13c4 0 5.5 2.5 5.5 7"/></svg>
+        <span class="am-swipe__hint" aria-hidden="true">Przeciągnij do AM Flowers</span>
         <button class="am-swipe__handle" type="button" role="slider" aria-labelledby="am-swipe-l" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="Przeciągnij w prawo albo naciśnij Enter, aby przejść do AM Flowers">
-          <img src="${base}logo/am-monogram-gold.svg" alt="" width="1233" height="720">
+          <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="44" class="o"/><circle cx="50" cy="50" r="37" class="i"/><polygon points="50.0,23.0 54.0,40.3 69.1,30.9 59.7,46.0 77.0,50.0 59.7,54.0 69.1,69.1 54.0,59.7 50.0,77.0 46.0,59.7 30.9,69.1 40.3,54.0 23.0,50.0 40.3,46.0 30.9,30.9 46.0,40.3"/></svg>
         </button>
       </div>
       <a class="am-swipe__link" href="${href}">Albo przejdź zwykłym linkiem: AM Flowers</a>`;
@@ -24,7 +26,8 @@
     const handle = root.querySelector('.am-swipe__handle');
     let p = 0, dragging = false, startX = 0, startP = 0, done = false;
 
-    const setW = () => root.style.setProperty('--w', track.clientWidth + 'px');
+    const span = () => track.clientWidth - handle.offsetWidth - 2 * handle.offsetLeft;
+    const setW = () => root.style.setProperty('--span', span() + 'px');
     setW(); new ResizeObserver(setW).observe(track);
     const set = v => { p = Math.max(0, Math.min(1, v)); root.style.setProperty('--p', p.toFixed(4)); handle.setAttribute('aria-valuenow', Math.round(p * 100)); };
     const back = () => { root.classList.add('is-back'); set(0); setTimeout(() => root.classList.remove('is-back'), 460); };
@@ -41,8 +44,7 @@
     });
     handle.addEventListener('pointermove', e => {
       if (!dragging) return;
-      const span = track.clientWidth - track.clientHeight;
-      set(startP + (e.clientX - startX) / span);
+      set(startP + (e.clientX - startX) / span());
     });
     const end = () => {
       if (!dragging) return; dragging = false;
