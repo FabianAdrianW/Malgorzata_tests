@@ -86,10 +86,10 @@ NAV_JS = '''
 def footer(home):
     h = lambda a: f'{home}{a}'
     return f'''<footer class="foot">
-  <div class="foot__brand"><b>Kwiaciarnia Małgorzata</b><p>Bukiety, kompozycje i&nbsp;dekoracje układane ręcznie w&nbsp;Oławie.</p><a class="foot__tel" href="tel:+48570740729">570 740 729</a><a class="am-sig-foot" data-am-go href="https://amflowers.pl/"><img src="am/logo/am-monogram-gold.svg" alt="" width="1233" height="720">Kwiaciarnia Małgorzata rośnie: poznaj AM Flowers</a></div>
-  <div><h3>Strona</h3><ul><li><a href="{h('#zamow')}">Zamów bukiet</a></li><li><a data-am-go href="https://amflowers.pl/sklep.html">Sklep</a></li><li><a href="{h('#sluby')}">Śluby i dekoracje</a></li><li><a href="{h('#oferta')}">Galeria</a></li><li><a href="{h('#opinie')}">Opinie</a></li></ul></div>
+  <div class="foot__brand"><b>Kwiaciarnia Małgorzata</b><p>Bukiety, kompozycje i&nbsp;dekoracje układane ręcznie w&nbsp;Oławie.</p><a class="foot__tel" href="tel:+48570740729">570 740 729</a><a class="am-sig-foot" data-am-go href="https://fabianadrianw.github.io/AM_flowers/"><img src="am/logo/am-monogram-gold.svg" alt="" width="1233" height="720">Kwiaciarnia Małgorzata rośnie: poznaj AM Flowers</a></div>
+  <div><h3>Strona</h3><ul><li><a href="{h('#zamow')}">Zamów bukiet</a></li><li><a data-am-go href="https://fabianadrianw.github.io/AM_flowers/sklep.html">Sklep</a></li><li><a href="{h('#sluby')}">Śluby i dekoracje</a></li><li><a href="{h('#oferta')}">Galeria</a></li><li><a href="{h('#opinie')}">Opinie</a></li></ul></div>
   <div><h3>Kontakt</h3><ul><li>ul. Jarosława Iwaszkiewicza 137A</li><li>55-200 Oława</li><li><a href="https://www.google.com/maps/search/?api=1&amp;query=Kwiaciarnia+Ma%C5%82gorzata+Iwaszkiewicza+137A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę</a></li><li><a href="https://www.facebook.com/kwiaciarniamalgorzata" target="_blank" rel="noopener">Facebook</a></li></ul></div>
-  <div><h3>Informacje</h3><ul><li><a data-am-go href="https://amflowers.pl/regulamin.html">Regulamin sklepu (AM Flowers)</a></li><li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li><li><a data-am-go href="https://amflowers.pl/">AM Flowers</a></li></ul></div>
+  <div><h3>Informacje</h3><ul><li><a data-am-go href="https://fabianadrianw.github.io/AM_flowers/regulamin.html">Regulamin sklepu (AM Flowers)</a></li><li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li><li><a data-am-go href="https://fabianadrianw.github.io/AM_flowers/">AM Flowers</a></li></ul></div>
   <div class="foot__bottom"><span>© 2026 Kwiaciarnia Małgorzata · AM Flowers, Oława</span><span>Strona: Adrian Wojtasik</span></div>
 </footer>'''
 

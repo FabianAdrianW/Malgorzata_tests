@@ -20,7 +20,7 @@ Kopia strony Kwiaciarni Małgorzata z repo `Kwiaciarnia_malgorzata` plus **faza 
 
 ## Pliki
 - `am/`: moduł suwaka (`am-swipe.css`, `am-swipe.js`), logo, wideo kurtyny. Kopia z repo `AM_flowers/swipe`.
-- `tools/am_link.py`: wprowadza fazę 1. Adres AM Flowers zmienia się w jednym miejscu (`AM = 'https://amflowers.pl/'`), potem uruchom skrypt ponownie.
+- `tools/am_link.py`: wprowadza fazę 1. Adres AM Flowers zmienia się w jednym miejscu (`AM = 'https://fabianadrianw.github.io/AM_flowers/'`), potem uruchom skrypt ponownie.
 - `tools/mega.py`, `tools/layout.py`: jak wcześniej; po ich uruchomieniu uruchom też `tools/am_link.py`.
 
 ## Wdrożenie

@@ -2,7 +2,7 @@
 podpis AM Flowers przy logo i w stopce, suwak w hero, sklep i regulamin prowadzą do AM Flowers (z kurtyną)."""
 import pathlib, re
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-AM = 'https://amflowers.pl/'   # jedno miejsce do zmiany adresu AM Flowers
+AM = 'https://fabianadrianw.github.io/AM_flowers/'   # jedno miejsce do zmiany adresu AM Flowers
 
 REPL = [
     ('href="sklep.html', f'data-am-go href="{AM}sklep.html'),

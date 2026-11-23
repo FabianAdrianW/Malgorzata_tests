@@ -23,12 +23,12 @@ def panels(home):  # home = '' on index, 'index.html' on other pages
     </section>
     <section class="mp mp--shop" data-p="sklep" aria-label="Sklep">
       <div class="mp__list">
-        <a data-am-go href="https://amflowers.pl/sklep.html#kat=bukiety" class="mp__item"><img src="img/p16.webp" alt="" loading="lazy"><span><b>Bukiety</b><small>Na każdą okazję, w&nbsp;3&nbsp;wielkościach</small></span></a>
-        <a data-am-go href="https://amflowers.pl/sklep.html#kat=kompozycje" class="mp__item"><img src="img/p04.webp" alt="" loading="lazy"><span><b>Kompozycje</b><small>Ślubne i&nbsp;dekoracyjne, na zamówienie</small></span></a>
-        <a data-am-go href="https://amflowers.pl/sklep.html#kat=pamiec" class="mp__item"><img src="img/p13.webp" alt="" loading="lazy"><span><b>Pamięć</b><small>Wieńce i&nbsp;kompozycje nagrobne</small></span></a>
-        <a data-am-go href="https://amflowers.pl/sklep.html" class="mp__more">Cały sklep{ARR}</a>
+        <a data-am-go href="https://fabianadrianw.github.io/AM_flowers/sklep.html#kat=bukiety" class="mp__item"><img src="img/p16.webp" alt="" loading="lazy"><span><b>Bukiety</b><small>Na każdą okazję, w&nbsp;3&nbsp;wielkościach</small></span></a>
+        <a data-am-go href="https://fabianadrianw.github.io/AM_flowers/sklep.html#kat=kompozycje" class="mp__item"><img src="img/p04.webp" alt="" loading="lazy"><span><b>Kompozycje</b><small>Ślubne i&nbsp;dekoracyjne, na zamówienie</small></span></a>
+        <a data-am-go href="https://fabianadrianw.github.io/AM_flowers/sklep.html#kat=pamiec" class="mp__item"><img src="img/p13.webp" alt="" loading="lazy"><span><b>Pamięć</b><small>Wieńce i&nbsp;kompozycje nagrobne</small></span></a>
+        <a data-am-go href="https://fabianadrianw.github.io/AM_flowers/sklep.html" class="mp__more">Cały sklep{ARR}</a>
       </div>
-      <a data-am-go href="https://amflowers.pl/sklep.html#p=pastelowy" class="mp__feat"><img src="img/p09.webp" alt="" loading="lazy"><span class="mp__badge">Bestseller</span><span class="mp__cap"><b>Bukiet Pastelowy</b><small>od 189 zł · BLIK, karta albo przy odbiorze</small></span></a>
+      <a data-am-go href="https://fabianadrianw.github.io/AM_flowers/sklep.html#p=pastelowy" class="mp__feat"><img src="img/p09.webp" alt="" loading="lazy"><span class="mp__badge">Bestseller</span><span class="mp__cap"><b>Bukiet Pastelowy</b><small>od 189 zł · BLIK, karta albo przy odbiorze</small></span></a>
     </section>
     <section class="mp" data-p="sluby" aria-label="Śluby i dekoracje">
       <div class="mp__list">
@@ -157,7 +157,7 @@ def inject(path, home):
     s = re.sub(r'\n<div class="mega" id="mega".*?</section>\n  </div></div>\n</div>', '', s, flags=re.S)
     s = re.sub(r'/\* ===== mega menu ===== \*/.*?(?=</style>)', '', s, flags=re.S)
     s = re.sub(r'<script>\n/\* ===== mega menu ===== \*/\n\(\(\)=>\{.*?\n\}\)\(\);\n</script>\n?', '', s, flags=re.S)
-    keymap = {'#oferta': 'oferta', 'https://amflowers.pl/sklep.html': 'sklep', '#sluby': 'sluby', '#opinie': 'opinie', '#kontakt': 'kontakt'}
+    keymap = {'#oferta': 'oferta', 'https://fabianadrianw.github.io/AM_flowers/sklep.html': 'sklep', '#sluby': 'sluby', '#opinie': 'opinie', '#kontakt': 'kontakt'}
     def fix(m):
         href, rest, label = m.group(1), m.group(2), m.group(3)
         key = next((v for k, v in keymap.items() if href.endswith(k)), None)
