@@ -1,0 +1,201 @@
+{
+ "_TODO": "Ceny, nazwy, dopłaty za wielkość i koszt dostawy są robocze. Potwierdzić z kwiaciarnią.",
+ "currency": "PLN",
+ "delivery_fee": 20,
+ "sizes": [
+  {
+   "id": "S",
+   "name": "Mała",
+   "delta": -30
+  },
+  {
+   "id": "M",
+   "name": "Standard",
+   "delta": 0
+  },
+  {
+   "id": "L",
+   "name": "Duża",
+   "delta": 60
+  }
+ ],
+ "products": [
+  {
+   "id": "pastelowy",
+   "cat": "bukiety",
+   "name": "Bukiet Pastelowy",
+   "price": 219,
+   "img": "img/p09.webp",
+   "alt": "img/p16.webp",
+   "badge": "Bestseller",
+   "colors": [
+    "#F2B8C6",
+    "#C9B6E4",
+    "#A9C4EA"
+   ],
+   "desc": "Piwonie, hortensja, białe róże i ostróżka w różowym papierze.",
+   "rec": 1
+  },
+  {
+   "id": "grejpfrut",
+   "cat": "bukiety",
+   "name": "Bukiet Grejpfrutowy",
+   "price": 149,
+   "img": "img/p10.webp",
+   "alt": "img/p11.webp",
+   "colors": [
+    "#C7243A",
+    "#F08A4B",
+    "#7BA05B"
+   ],
+   "desc": "Czerwone róże, gerbery i protea z miętą i połówką grejpfruta.",
+   "rec": 2
+  },
+  {
+   "id": "sloneczny",
+   "cat": "bukiety",
+   "name": "Bukiet Słoneczny",
+   "price": 139,
+   "img": "img/p12.webp",
+   "colors": [
+    "#F2C14E",
+    "#F7F1D9",
+    "#7BA05B"
+   ],
+   "desc": "Żółte i kremowe gerbery, białe róże i cytryna w błękitnym papierze.",
+   "rec": 3
+  },
+  {
+   "id": "fuksja",
+   "cat": "bukiety",
+   "name": "Bukiet Fuksja",
+   "price": 129,
+   "img": "img/p14.webp",
+   "colors": [
+    "#C2246E",
+    "#E58BB0",
+    "#9DBA6A"
+   ],
+   "desc": "Fuksjowe chryzantemy, różowe róże i lewkonia w malinowym papierze.",
+   "rec": 5
+  },
+  {
+   "id": "liliowy",
+   "cat": "bukiety",
+   "name": "Bukiet Liliowy",
+   "price": 189,
+   "img": "img/p16.webp",
+   "badge": "Nowość",
+   "colors": [
+    "#B88BC9",
+    "#F2B8C6",
+    "#F7E7D8"
+   ],
+   "desc": "Piwonia, liliowe róże i czosnek ozdobny w opalizującym papierze.",
+   "rec": 4
+  },
+  {
+   "id": "czerwony",
+   "cat": "bukiety",
+   "name": "Bukiet Czerwony",
+   "price": 119,
+   "img": "img/p15.webp",
+   "colors": [
+    "#C7243A",
+    "#8E1530",
+    "#6E8F4E"
+   ],
+   "desc": "Czerwona piwonia, róże i alstremeria w czerwonym papierze.",
+   "rec": 6
+  },
+  {
+   "id": "kolorowy",
+   "cat": "bukiety",
+   "name": "Bukiet Kolorowy",
+   "price": 159,
+   "img": "img/p08.webp",
+   "colors": [
+    "#C7243A",
+    "#F2C14E",
+    "#F08A4B"
+   ],
+   "desc": "Czerwone i żółte róże, słoneczniki i tulipany w kremowym papierze.",
+   "rec": 7,
+   "featured": true
+  },
+  {
+   "id": "flowerbox",
+   "cat": "kompozycje",
+   "name": "Flowerbox Pudrowy",
+   "price": 189,
+   "img": "img/flowerbox.webp",
+   "colors": [
+    "#F2B8C6",
+    "#C9B6E4",
+    "#FFFFFF"
+   ],
+   "desc": "Piwonie, białe róże i eustoma w pudrowym pudełku z wstążką. Stoi bez wazonu.",
+   "rec": 12
+  },
+  {
+   "id": "slubna",
+   "cat": "kompozycje",
+   "name": "Kompozycja ślubna",
+   "price": 350,
+   "from": true,
+   "img": "img/p01.webp",
+   "colors": [
+    "#FFFFFF",
+    "#E9E3D2",
+    "#6E8F4E"
+   ],
+   "desc": "Orchidee, białe róże i magnolie. Wycenimy po rozmowie o dekoracji.",
+   "rec": 8
+  },
+  {
+   "id": "sliwkowa",
+   "cat": "kompozycje",
+   "name": "Kompozycja śliwkowa",
+   "price": 290,
+   "from": true,
+   "img": "img/p04.webp",
+   "colors": [
+    "#6E2A5E",
+    "#B88BC9",
+    "#FFFFFF"
+   ],
+   "desc": "Kalie, chryzantemy i piwonie w odcieniach śliwki, na stojaku.",
+   "rec": 9
+  },
+  {
+   "id": "wieniec",
+   "cat": "pamiec",
+   "name": "Wieniec pogrzebowy",
+   "price": 250,
+   "from": true,
+   "img": "img/p13.webp",
+   "colors": [
+    "#C7243A",
+    "#F2B8C6",
+    "#FFFFFF"
+   ],
+   "desc": "Wieniec na stojaku. Napis na szarfie ustalimy telefonicznie.",
+   "rec": 10
+  },
+  {
+   "id": "nagrobna",
+   "cat": "pamiec",
+   "name": "Kompozycja nagrobna",
+   "price": 189,
+   "from": true,
+   "img": "img/p06.webp",
+   "colors": [
+    "#FFFFFF",
+    "#E9E3D2",
+    "#4E6346"
+   ],
+   "desc": "Biała kompozycja z orchideami i chryzantemami.",
+   "rec": 11
+  }
+ ]
+}

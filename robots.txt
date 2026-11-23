@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /sukces.html
+# TODO: po podpięciu domeny dodaj: Sitemap: https://DOMENA/sitemap.xml

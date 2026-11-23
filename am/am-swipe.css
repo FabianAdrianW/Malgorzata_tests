@@ -1,0 +1,49 @@
+/* AM Flowers · suwak przejścia (wpinany na stronę Kwiaciarni Małgorzata)
+   Użycie: <div class="am-swipe" data-href="https://amflowers.pl/" data-asset-base="https://amflowers.pl/"></div> */
+.am-swipe{--g:#C9A45C;--g-text:#7A5A22;--em:#0F2A24;--em-d:#0A1E19;--iv:#F4EEE3;
+  display:flex;flex-direction:column;gap:.7rem;max-width:24rem;font-family:'Jost','Instrument Sans',system-ui,sans-serif}
+.am-swipe__label{display:flex;align-items:center;gap:.55rem;font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--g-text);margin:0}
+.am-swipe__label svg{width:1.1rem;height:1.1rem;flex:none}
+.am-swipe__track{position:relative;height:3.5rem;border-radius:999px;border:1px solid rgba(122,90,34,.35);background:rgba(255,255,255,.65);overflow:hidden;touch-action:pan-y;-webkit-tap-highlight-color:transparent;user-select:none}
+.am-swipe__fill{position:absolute;inset:0 auto 0 0;width:calc(var(--p,0) * (100% - 3.5rem) + 3.5rem);background:var(--em);border-radius:999px}
+.am-swipe__fill:after{content:"";position:absolute;inset:auto 1.5rem 50% 1.75rem;height:5px;transform:translateY(50%);border-block:1px solid var(--g);opacity:calc(var(--p,0) * 1.4)}
+.am-swipe__hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding-left:3rem;font-size:.75rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--em);opacity:calc(1 - var(--p,0) * 2.2);pointer-events:none}
+.am-swipe__hint i{display:inline-block;margin-left:.5rem;font-style:normal;animation:amNudge 2.2s cubic-bezier(.22,1,.36,1) infinite}
+.am-swipe__handle{position:absolute;top:.25rem;left:.25rem;width:3rem;height:3rem;border-radius:50%;border:0;padding:0;background:var(--em);box-shadow:0 0 0 1px var(--g),0 6px 18px rgba(15,42,36,.28);display:grid;place-items:center;cursor:grab;transform:translateX(calc(var(--p,0) * (var(--w,0px) - 3.5rem)));touch-action:none}
+.am-swipe__handle img{width:2.1rem;height:auto;pointer-events:none}
+.am-swipe__handle:active{cursor:grabbing}
+.am-swipe__handle:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+.am-swipe.is-back .am-swipe__handle,.am-swipe.is-back .am-swipe__fill{transition:transform .45s cubic-bezier(.34,1.3,.5,1),width .45s cubic-bezier(.34,1.3,.5,1)}
+.am-swipe.is-done .am-swipe__handle,.am-swipe.is-done .am-swipe__fill{transition:transform .35s cubic-bezier(.22,1,.36,1),width .35s cubic-bezier(.22,1,.36,1)}
+.am-swipe__link{font-size:.8125rem;color:var(--g-text);text-underline-offset:.2em;align-self:flex-start;min-height:44px;display:inline-flex;align-items:center}
+@keyframes amNudge{0%,60%,100%{transform:none}30%{transform:translateX(.35rem)}}
+
+/* kurtyna */
+.am-curtain{position:fixed;inset:0;z-index:9999;pointer-events:none;color:var(--iv,#F4EEE3)}
+.am-curtain__line{position:absolute;left:0;right:0;height:5px;border-block:1px solid #C9A45C;transform:scaleX(0);transform-origin:var(--ox,50%) 50%;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.am-curtain__veil{position:absolute;inset:0;background:#0A1E19;clip-path:inset(var(--ly,50%) 0 calc(100% - var(--ly,50%)) 0);transition:clip-path .7s cubic-bezier(.76,0,.24,1)}
+.am-curtain__veil video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.am-curtain__veil:after{content:"";position:absolute;inset:0;background:radial-gradient(80% 70% at 50% 50%,rgba(15,42,36,.35),rgba(10,30,25,.92))}
+.am-curtain__c{position:absolute;width:clamp(3.5rem,8vw,6rem);height:clamp(3.5rem,8vw,6rem);opacity:0;transition:opacity .4s,transform .7s cubic-bezier(.22,1,.36,1)}
+.am-curtain__c:before,.am-curtain__c:after{content:"";position:absolute;border:solid #C9A45C;border-width:1px 0 0 1px}
+.am-curtain__c:before{inset:0}.am-curtain__c:after{inset:.6rem 0 0 .6rem}
+.am-curtain__c.tl{top:1.5rem;left:1.5rem;transform:translate(1.5rem,1.5rem)}
+.am-curtain__c.tr{top:1.5rem;right:1.5rem;transform:rotate(90deg) translate(1.5rem,1.5rem)}
+.am-curtain__c.bl{bottom:1.5rem;left:1.5rem;transform:rotate(-90deg) translate(1.5rem,1.5rem)}
+.am-curtain__c.br{bottom:1.5rem;right:1.5rem;transform:rotate(180deg) translate(1.5rem,1.5rem)}
+.am-curtain__mark{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.25rem;text-align:center;padding:2rem;opacity:0;transform:translateY(.75rem);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.am-curtain__mark img{width:min(46vw,15rem);height:auto}
+.am-curtain__mark p{margin:0;font-family:'Cormorant',Georgia,serif;font-size:clamp(1.5rem,3.6vw,2.4rem);line-height:1.15;color:#F4EEE3}
+.am-curtain__mark p b{color:#C9A45C;font-weight:500}
+.am-curtain.s1 .am-curtain__line{transform:scaleX(1)}
+.am-curtain.s2 .am-curtain__veil{clip-path:inset(0 0 0 0)}
+.am-curtain.s2 .am-curtain__line{opacity:0;transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .3s .3s}
+.am-curtain.s3 .am-curtain__c{opacity:1}
+.am-curtain.s3 .am-curtain__c.tl{transform:none}.am-curtain.s3 .am-curtain__c.tr{transform:rotate(90deg)}
+.am-curtain.s3 .am-curtain__c.bl{transform:rotate(-90deg)}.am-curtain.s3 .am-curtain__c.br{transform:rotate(180deg)}
+.am-curtain.s3 .am-curtain__mark{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  .am-swipe__hint i{animation:none}
+  .am-curtain *{transition:none!important}
+}
