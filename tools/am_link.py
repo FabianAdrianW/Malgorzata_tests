@@ -35,10 +35,10 @@ def patch(path, html=True):
     for a, b in REPL:
         if b not in s:
             s = s.replace(a, b)
-    if html and 'am/am-swipe.css' not in s:
+    if html and 'am/am-swipe.css?v=4' not in s:
         s = s.replace('</style>', CSS + '</style>', 1)
-        s = s.replace('</head>', '<link rel="stylesheet" href="am/am-swipe.css">\n</head>', 1)
-        s = s.replace('</body>', '<script src="am/am-swipe.js" defer></script>\n</body>', 1)
+        s = s.replace('</head>', '<link rel="stylesheet" href="am/am-swipe.css?v=4">\n</head>', 1)
+        s = s.replace('</body>', '<script src="am/am-swipe.js?v=4" defer></script>\n</body>', 1)
     p.write_text(s)
 
 if __name__ == '__main__':

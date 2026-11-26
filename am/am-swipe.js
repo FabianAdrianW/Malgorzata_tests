@@ -6,6 +6,8 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const THRESHOLD = 0.6;
   const wait = ms => new Promise(r => setTimeout(r, ms));
+  const resets = [];
+  let busy = false, run = 0;
 
   function build(root) {
     const href = root.dataset.href || 'https://amflowers.pl/';
@@ -33,6 +35,8 @@
       root.classList.add('is-done'); set(1);
       go(href, base, handle);
     };
+
+    resets.push(() => { done = false; dragging = false; root.classList.remove('is-done', 'is-back'); set(0); });
 
     handle.addEventListener('pointerdown', e => {
       if (done) return;
@@ -62,10 +66,9 @@
   const mark = href => {
     try { const u = new URL(href, location.href); u.searchParams.set('z', 'malgorzata'); return u.href; } catch (_) { return href; }
   };
-  let busy = false;
   async function go(href, base, handle) {
     if (busy) return; busy = true;
-    try { sessionStorage.setItem('amArrive', '1'); } catch (_) {}
+    const id = ++run;
     href = mark(href);
     if (reduce) { location.href = href; return; }
     const r = handle.getBoundingClientRect();
@@ -78,16 +81,25 @@
       <div class="am-curtain__veil"><video muted playsinline autoplay loop preload="auto" poster="${base}img/curtain-poster.webp" src="${base}video/curtain.mp4"></video></div>
       <span class="am-curtain__line" style="top:calc(${ly} - 2.5px)"></span>
       <i class="am-curtain__c tl"></i><i class="am-curtain__c tr"></i><i class="am-curtain__c bl"></i><i class="am-curtain__c br"></i>
-      <div class="am-curtain__mark"><img src="${base}logo/am-flowers-gold.svg" alt=""><p>Ta sam<b>AM</b>iłość do kwiatów.</p></div>`;
+      <div class="am-curtain__mark"><img src="${base}logo/am-flowers-gold.svg" alt=""><p>Dwa pokolenia,<br><b>AM</b>iłość do kwiatów ta sama.</p></div>`;
     document.body.appendChild(c);
-    const link = document.createElement('link'); link.rel = 'prefetch'; link.href = href; document.head.appendChild(link);
-    await wait(380); c.classList.add('s1');
-    await wait(480); c.classList.add('s2');
-    await wait(650); c.classList.add('s3');
-    await wait(1100); location.href = href;
+    const link = document.createElement('link'); link.rel = 'prefetch'; link.href = href; link.dataset.amPrefetch = ''; document.head.appendChild(link);
+    for (const [ms, step] of [[380, 's1'], [480, 's2'], [650, 's3'], [1100, null]]) {
+      await wait(ms); if (id !== run) return;
+      step ? c.classList.add(step) : (location.href = href);
+    }
   }
 
   document.querySelectorAll('.am-swipe').forEach(build);
+  document.fonts?.load("400 1em 'AM Cormorant'", 'AMiłość ó').catch(() => {});
+
+  /* "Wstecz" przywraca stronę z pamięci przeglądarki razem z kurtyną: zdejmujemy ją i zerujemy suwak */
+  addEventListener('pageshow', e => {
+    if (!e.persisted) return;
+    run++; busy = false;
+    document.querySelectorAll('.am-curtain, link[data-am-prefetch]').forEach(n => n.remove());
+    resets.forEach(f => f());
+  });
 
   /* zwykłe linki do AM Flowers: ta sama kurtyna */
   document.addEventListener('click', e => {

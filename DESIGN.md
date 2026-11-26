@@ -111,7 +111,7 @@ Logo w oryginale, zgoda na zdjęcia, ceny (79/129/199 zł robocze), godziny otwa
 ## Faza 1: przejście na AM Flowers (2026-11-23)
 - Strona zostaje klasyczna: bez sklepu i bez kwiatomatu. Sklep, regulamin sklepu i płatności są w AM Flowers (`amflowers.pl`).
 - Nagłówek: pod nazwą mały podpis „AM Flowers” ze złotym monogramem.
-- Hero: suwak przejścia (złoty uchwyt z monogramem). Przeciągnięcie za 60%, klik albo Enter uruchamia kurtynę: złota linia, szmaragd z wideo jedwabiu, narożniki z wizytówki, hasło „Ta samAMiłość do kwiatów.”, potem AM Flowers.
+- Hero: suwak przejścia (złoty uchwyt z monogramem). Przeciągnięcie za 60%, klik albo Enter uruchamia kurtynę: złota linia, szmaragd z wideo jedwabiu, narożniki z wizytówki, hasło „Dwa pokolenia, AMiłość do kwiatów ta sama.”, potem AM Flowers.
 - Każdy link do AM Flowers (`data-am-go`) używa tej samej kurtyny.
 - Stopka: „Kwiaciarnia Małgorzata rośnie: poznaj AM Flowers”, © Kwiaciarnia Małgorzata · AM Flowers.
 - Szczegóły marki: repo `AM_flowers`, folder `brand/`.

@@ -1,3 +1,5 @@
+@font-face{font-family:'AM Cormorant';src:url('fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2013-2014,U+2018-201E,U+2022,U+2026,U+2122,U+2212}
+@font-face{font-family:'AM Cormorant';src:url('fonts/cormorant-garamond-latin-ext-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+1E00-1E9F,U+20A0-20C0,U+2C60-2C7F,U+A720-A7FF}
 /* AM Flowers · suwak przejścia (wpinany na stronę Kwiaciarni Małgorzata)
    Użycie: <div class="am-swipe" data-href="https://amflowers.pl/" data-asset-base="https://amflowers.pl/"></div> */
 .am-swipe{--g:#C9A45C;--g-text:#7A5A22;--em:#0F2A24;--em-d:#0A1E19;--iv:#F4EEE3;
@@ -33,7 +35,7 @@
 .am-curtain__c.br{bottom:1.5rem;right:1.5rem;transform:rotate(180deg) translate(1.5rem,1.5rem)}
 .am-curtain__mark{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.25rem;text-align:center;padding:2rem;opacity:0;transform:translateY(.75rem);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
 .am-curtain__mark img{width:min(46vw,15rem);height:auto}
-.am-curtain__mark p{margin:0;font-family:'Cormorant',Georgia,serif;font-size:clamp(1.5rem,3.6vw,2.4rem);line-height:1.15;color:#F4EEE3}
+.am-curtain__mark p{margin:0;font-family:'AM Cormorant','Cormorant',Georgia,serif;font-size:clamp(1.5rem,3.6vw,2.4rem);line-height:1.15;color:#F4EEE3}
 .am-curtain__mark p b{color:#C9A45C;font-weight:500}
 .am-curtain.s1 .am-curtain__line{transform:scaleX(1)}
 .am-curtain.s2 .am-curtain__veil{clip-path:inset(0 0 0 0)}

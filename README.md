@@ -27,6 +27,6 @@ Kopia strony Kwiaciarni Małgorzata z repo `Kwiaciarnia_malgorzata` plus **faza 
 Cloudflare Pages, statycznie (bez kroku budowania). Własna domena kwiaciarni. Do testów przed podpięciem domen ustaw w `tools/am_link.py` adres testowy AM Flowers (np. `https://am-flowers.pages.dev/`) i uruchom skrypt.
 
 ## Do uzupełnienia
-- Adres: na stronie 137A, na wizytówce 137B. Potwierdzić.
+- Adres potwierdzony: ul. Iwaszkiewicza 137B.
 - Docelowe domeny obu stron.
 - Faza 2 (za 3–6 miesięcy): wspólny znak `am/logo/lockup-am-x-malgorzata.svg` zamiast obecnego logo.

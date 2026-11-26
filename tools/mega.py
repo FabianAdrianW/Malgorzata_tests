@@ -46,15 +46,15 @@ def panels(home):  # home = '' on index, 'index.html' on other pages
     </section>
     <section class="mp mp--small" data-p="kontakt" aria-label="Kontakt">
       <a class="mp__tel" href="tel:+48570740729">570 740 729</a>
-      <p class="mp__addr">ul. Jarosława Iwaszkiewicza 137A<br>55-200 Oława</p>
-      <div class="mp__btns"><a class="mp__more" href="https://www.google.com/maps/search/?api=1&amp;query=Kwiaciarnia+Ma%C5%82gorzata+Iwaszkiewicza+137A+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę{ARR}</a>
+      <p class="mp__addr">ul. Jarosława Iwaszkiewicza 137B<br>55-200 Oława</p>
+      <div class="mp__btns"><a class="mp__more" href="https://www.google.com/maps/search/?api=1&amp;query=Kwiaciarnia+Ma%C5%82gorzata+Iwaszkiewicza+137B+O%C5%82awa" target="_blank" rel="noopener">Wyznacz trasę{ARR}</a>
         <a class="mp__more" href="https://www.facebook.com/kwiaciarniamalgorzata" target="_blank" rel="noopener">Facebook{ARR}</a></div>
     </section>
   </div></div>
 </div>'''
 
 DESCS = {'oferta': 'Nasze bukiety i dekoracje', 'sklep': 'Zamów online z odbiorem lub dostawą',
-         'sluby': 'Wiązanki, kościoły, sale', 'opinie': '4,5 w Google, 148 opinii', 'kontakt': 'Oława, Iwaszkiewicza 137A'}
+         'sluby': 'Wiązanki, kościoły, sale', 'opinie': '4,5 w Google, 148 opinii', 'kontakt': 'Oława, Iwaszkiewicza 137B'}
 
 CSS = '''
 /* ===== mega menu ===== */
